@@ -1,3 +1,4 @@
+require "active_record"
 require "active_record/safe_initialize/version"
 
 module ActiveRecord
