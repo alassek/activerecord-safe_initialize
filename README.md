@@ -1,4 +1,5 @@
 # ActiveRecord::SafeInitialize
+[![Build Status](https://travis-ci.org/lyconic/activerecord-safe_initialize.svg)](https://travis-ci.org/lyconic/activerecord-safe_initialize)
 
 Safely initialize an ActiveRecord attribute with respect to missing columns.
 
