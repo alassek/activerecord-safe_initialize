@@ -1,5 +1,3 @@
-require 'securerandom'
-
 describe Post do
   before(:all) { Post.create(title: "Test Post", body: "This is a test.", uuid: SecureRandom.uuid) }
   after(:all)  { Post.first.destroy }

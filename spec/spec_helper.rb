@@ -1,4 +1,5 @@
 require 'active_record/safe_initialize'
+require 'securerandom'
 
 ActiveRecord::Base.configurations = {
   'test' => {
