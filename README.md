@@ -69,6 +69,14 @@ class Post < ActiveRecord::Base
 end
 ```
 
+You can set a default for multiple attributes at once:
+
+```ruby
+class Employee < ActiveRecord::Base
+  safe_initialize :pay_rate, :holiday_rate, with: 0.0
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/lyconic/activerecord-safe_initialize/fork )
