@@ -49,4 +49,17 @@ describe ActiveRecord::SafeInitialize do
       expect( klass.first.uuid ).to eq uuid
     end
   end
+
+  context "multiple attributes" do
+    it "creates a default for each one" do
+      klass = Class.new(Post)
+
+      expect{ klass.safe_initialize :title, :body, :uuid, with: 'foo' }.to_not raise_error
+
+      inst = klass.new
+      expect( inst.title ).to eq 'foo'
+      expect( inst.body ).to eq 'foo'
+      expect( inst.uuid ).to eq 'foo'
+    end
+  end
 end
