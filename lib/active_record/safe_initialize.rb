@@ -4,14 +4,16 @@ require 'active_support/core_ext/array/extract_options'
 
 module ActiveRecord
   module SafeInitialize
-    def safe_initialize(*attributes)
+    def safe_initialize(*attributes, &block)
       options = attributes.extract_options!
-      raise ArgumentError, "Missing initialization value" unless options[:with]
+      default = options.fetch(:with, block)
+      raise ArgumentError, "Missing initialization value" unless default
+      warn "Both :with and block are present; using :with value" if options[:with] && block_given?
 
-      after_initialize do
+      after_initialize(options) do
         attributes.each do |attribute|
           if has_attribute?(attribute) && read_attribute(attribute).nil?
-            value = options[:with]
+            value = default
             value = instance_exec(&value) if value.respond_to?(:call)
             value = self.send(value) if value.is_a?(Symbol)
 
