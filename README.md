@@ -77,6 +77,20 @@ class Employee < ActiveRecord::Base
 end
 ```
 
+Options are passed through to `after_initialize`:
+
+```ruby
+safe_initialize :uuid, with: ->{ SecureRandom.uuid }, :if => :new_record?
+```
+
+A block can be used instead of `:with`
+
+```ruby
+safe_initialize :uuid, :if => :new_record? do
+  SecureRandom.uuid
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/lyconic/activerecord-safe_initialize/fork )
