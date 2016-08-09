@@ -1,6 +1,6 @@
 # ActiveRecord::SafeInitialize
 [![Gem Version](https://badge.fury.io/rb/activerecord-safe_initialize.svg)](http://badge.fury.io/rb/activerecord-safe_initialize)
-[![Build Status](https://travis-ci.org/lyconic/activerecord-safe_initialize.svg)](https://travis-ci.org/lyconic/activerecord-safe_initialize)
+[![Build Status](https://travis-ci.org/alassek/activerecord-safe_initialize.svg)](https://travis-ci.org/alassek/activerecord-safe_initialize)
 
 Safely initialize an ActiveRecord attribute with respect to missing columns.
 
