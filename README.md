@@ -1,3 +1,7 @@
+# Deprecation Notice
+
+The [Rails 5.0 Attributes API](http://edgeguides.rubyonrails.org/5_0_release_notes.html#active-record-attributes-api) provides a default option that makes this gem unnecessary.
+
 # ActiveRecord::SafeInitialize
 [![Gem Version](https://badge.fury.io/rb/activerecord-safe_initialize.svg)](http://badge.fury.io/rb/activerecord-safe_initialize)
 [![Build Status](https://travis-ci.org/alassek/activerecord-safe_initialize.svg)](https://travis-ci.org/alassek/activerecord-safe_initialize)
